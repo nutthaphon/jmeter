@@ -6,7 +6,7 @@ ENV JVM_ARGS "-Xms128m -Xmx256m"
 ENV SERVER_PORT 1099
 ENV JMETER_HOME apache-jmeter-3.0
 
-RUN ln -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
+RUN (mv /etc/localtime /etc/localtime.old; ln -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime)
 
 RUN echo deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main >> /etc/apt/sources.list.d/java-8-ubuntu.list
 RUN	echo deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main >> /etc/apt/sources.list.d/java-8-ubuntu.list
