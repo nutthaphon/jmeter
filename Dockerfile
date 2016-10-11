@@ -18,7 +18,7 @@ WORKDIR /root
 RUN wget http://www-us.apache.org/dist//jmeter/binaries/apache-jmeter-3.0.tgz
 RUN	tar xzvf apache-jmeter-3.0.tgz
 	
-EXPOSE SERVER_PORT
+EXPOSE ${SERVER_PORT}
 
 CMD ${JMETER_HOME}/bin/jmeter-server
 
