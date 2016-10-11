@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+
 MAINTAINER Nutthaphon Suwanwong
 
 ENV JVM_ARGS "-Xms128m -Xmx256m"
