@@ -20,4 +20,7 @@ RUN	tar xzvf apache-jmeter-3.0.tgz
 	
 EXPOSE ${SERVER_PORT}
 
-CMD ${JMETER_HOME}/bin/jmeter-server
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
+
+CMD "entrypoint.sh"
