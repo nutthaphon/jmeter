@@ -6,7 +6,7 @@ ENV JVM_ARGS "-Xms128m -Xmx256m"
 ENV SERVER_PORT 1099
 ENV JMETER_HOME apache-jmeter-3.0
 
-RUN apt-get install software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
 	add-apt-repository ppa:webupd8team/java
 	apt-get update
 	echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
